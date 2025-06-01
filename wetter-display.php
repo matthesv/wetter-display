@@ -1196,12 +1196,13 @@ new WetterDisplay();
 // Update Checker (nur wenn die Datei existiert)
 if (file_exists(WETTER_DISPLAY_PLUGIN_DIR . 'includes/plugin-update-checker/plugin-update-checker.php')) {
     require_once WETTER_DISPLAY_PLUGIN_DIR . 'includes/plugin-update-checker/plugin-update-checker.php';
-    use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
     
-    $myUpdateChecker = PucFactory::buildUpdateChecker(
-        'https://github.com/matthesv/wetter-display/',
-        __FILE__,
-        'wetter-display'
-    );
-    $myUpdateChecker->setBranch('main');
+    if (class_exists('YahnisElsts\PluginUpdateChecker\v5\PucFactory')) {
+        $myUpdateChecker = \YahnisElsts\PluginUpdateChecker\v5\PucFactory::buildUpdateChecker(
+            'https://github.com/matthesv/wetter-display/',
+            __FILE__,
+            'wetter-display'
+        );
+        $myUpdateChecker->setBranch('main');
+    }
 }
