@@ -3,7 +3,7 @@
  * Plugin Name: Wetter Display
  * Plugin URI: https://matthesv.de
  * Description: Zeigt das aktuelle Wetter über einen Shortcode an - mit intelligenter Caching-Strategie
- * Version: 3.0.1
+ * Version: 3.0.0
  * Author: Matthes Vogel
  * License: GPL v2 or later
  */
@@ -1205,4 +1205,3 @@ if (file_exists(WETTER_DISPLAY_PLUGIN_DIR . 'includes/plugin-update-checker/plug
     );
     $myUpdateChecker->setBranch('main');
 }
-?>
