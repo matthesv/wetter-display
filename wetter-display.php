@@ -19,7 +19,7 @@ define('WETTER_DISPLAY_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 class WetterDisplay {
     
-    private $option_display_options';
+    private $option_name = 'wetter_display_options';
     private $cache_prefix = 'wetter_cache_';
     private $cache_group = 'wetter_display';
     private $cache_method;
